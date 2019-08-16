@@ -12,9 +12,18 @@ class Users::SessionsController < Devise::SessionsController
   # POST /resource/sign_in
   def create
     @user = User.find_by!(email: params[:user]['email']); 
-    @user_group = @user.groups[0].name
-    super if @user_group == 'ORG'
+    @is_org = org?(@user.groups)
+    super if @is_org
   end
+
+  def org?(groups)
+    groups.each do |group|
+      return true if group.name == 'ORG'
+    end
+    return false
+  end
+
+    
 
   # DELETE /resource/sign_out
   # def destroy
