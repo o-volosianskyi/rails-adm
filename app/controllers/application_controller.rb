@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
   end
   # logout redirect
   def after_sign_out_path_for(resource)
-    stored_location_for(resource) || '/users/sign_in'
+    stored_location_for(resource) || '/admin/sign_in'
   end
 end
