@@ -256,7 +256,7 @@ GEM
       rubocop (>= 0.60.0)
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
-    rugged (0.28.3)
+    rugged (0.99.0)
     sassc (2.0.1)
       ffi (~> 1.9)
       rake
@@ -298,7 +298,7 @@ GEM
       warden (~> 1.2)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.4)
+    websocket-extensions (0.1.5)
 
 PLATFORMS
   ruby
